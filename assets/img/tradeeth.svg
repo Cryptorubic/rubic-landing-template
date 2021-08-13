@@ -1,0 +1,18 @@
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle r="13" transform="matrix(-1 0 0 1 13.0005 13)" fill="#687DE3"/>
+<g opacity="0.6">
+<path opacity="0.6" d="M12.8607 10.395L19.0005 13.1874L12.8607 16.8148L6.72326 13.1874L12.8607 10.395Z" fill="white"/>
+</g>
+<g opacity="0.45">
+<path opacity="0.55" d="M19.0005 13.1874L12.8607 16.8148V3.00024L19.0005 13.1874Z" fill="white"/>
+</g>
+<g opacity="0.8">
+<path opacity="0.9" d="M12.8608 3V16.8146L6.72343 13.1872L12.8608 3Z" fill="white"/>
+</g>
+<g opacity="0.45">
+<path opacity="0.55" d="M19.0005 14.3503L12.8607 23.0002V17.9778L19.0005 14.3503Z" fill="white"/>
+</g>
+<g opacity="0.8">
+<path opacity="0.9" d="M12.8608 17.9778V23.0002L6.71861 14.3503L12.8608 17.9778Z" fill="white"/>
+</g>
+</svg>

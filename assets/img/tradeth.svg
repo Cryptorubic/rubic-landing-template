@@ -1,0 +1,19 @@
+<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.000488281" width="34" height="34" rx="8" fill="white"/>
+<circle r="13" transform="matrix(-1 0 0 1 17.0005 17)" fill="#687DE3"/>
+<g opacity="0.6">
+<path opacity="0.6" d="M16.8607 14.395L23.0005 17.1874L16.8607 20.8148L10.7233 17.1874L16.8607 14.395Z" fill="white"/>
+</g>
+<g opacity="0.45">
+<path opacity="0.55" d="M23.0005 17.1874L16.8607 20.8148V7.00024L23.0005 17.1874Z" fill="white"/>
+</g>
+<g opacity="0.8">
+<path opacity="0.9" d="M16.8608 7V20.8146L10.7234 17.1872L16.8608 7Z" fill="white"/>
+</g>
+<g opacity="0.45">
+<path opacity="0.55" d="M23.0005 18.3503L16.8607 27.0002V21.9778L23.0005 18.3503Z" fill="white"/>
+</g>
+<g opacity="0.8">
+<path opacity="0.9" d="M16.8608 21.9778V27.0002L10.7186 18.3503L16.8608 21.9778Z" fill="white"/>
+</g>
+</svg>
