@@ -741,6 +741,10 @@ body{
     font-weight: 600;
     font-size: 18px;
 }
+.trade-inner > iframe {
+    border-radius: 19px;
+    margin-top: 33px;
+}
 .trader-holder{
     display: flex;
     flex-direction: column;
