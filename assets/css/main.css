@@ -518,11 +518,19 @@ body{
 .page-link:first-child{
     margin-bottom: 40px;
 }
-.page-link:first-child > a{
-    margin-right: 22px;
+.page-link:first-child > span{
+    margin-right: 10px;
 }
-.page-link:last-child > a{
-    margin-right: 40px;
+.page-link:last-child > span{
+    margin-right: 10px;
+}
+
+.page-link:hover img {
+    transition: transform 100ms;
+}
+
+.page-link:hover img {
+    transform: translateX(3px);
 }
 
 /* partners */
@@ -1707,6 +1715,17 @@ button{
         font-size: 16px;
         margin-top: 40px;
     }
+
+    .trade-inner > button:hover {
+        background: linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
+        box-shadow: 0px 10px 50px rgba(34, 221, 59, 0.25);
+    }
+
+    .trade-inner > button:active {
+        background: linear-gradient(0deg, rgba(29, 32, 64, 0.1), rgba(29, 32, 64, 0.1)), linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
+        box-shadow: 0px 5px 30px rgba(34, 221, 59, 0.25);
+    }
+
     #footer > .container > p{
         margin-top: 40px;
         font-family: 'NeoGram', sans-serif;
