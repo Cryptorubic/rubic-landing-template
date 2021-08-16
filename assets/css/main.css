@@ -158,11 +158,27 @@ body{
     letter-spacing: 0em;
     text-align: center;
     color: white;
-    background: linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
     border-radius: 12px;
     z-index: 3;
-
+    transition: background 100ms ease-out;
 }
+
+.btn {
+    background: linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
+    box-shadow: 0px 5px 30px rgba(34, 221, 59, 0.25);
+}
+
+.btn:hover {
+    background: linear-gradient(99.66deg, #0083FF 3.76%, #30DA60 67.93%);
+    box-shadow: 0px 10px 50px rgba(34, 221, 59, 0.25);
+}
+
+.btn:active {
+    background: linear-gradient(96.88deg, #0083FF -42.02%, #30DA60 39.1%);
+    box-shadow: 0px 10px 50px rgba(34, 221, 59, 0.25);
+}
+
+
 #banner > a > img {
     margin-left: 35px;
 }
@@ -742,8 +758,6 @@ body{
     margin-top: 50px;
     width: 260px;
     height: 60px;
-    background: linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);;
-    box-shadow: 0px 5px 30px rgba(34, 221, 75, 0.5);
     border-radius: 12px;
     color: white;
     font-weight: 600;
@@ -926,12 +940,13 @@ body{
 }
 .subs-inputOuter{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    max-width: 474px;
 }
 .subs-input > input{
-    max-width: 264px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -951,7 +966,9 @@ body{
 .subs-input > button{
     width: 170px;
     display: flex;
-    justify-content: center;align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
     border-bottom-right-radius: 12px;
     border-top-right-radius: 12px;
@@ -959,7 +976,16 @@ body{
     color: white;
     font-weight: 600;
     font-size: 18px;
+}
 
+.subs-input > button:hover {
+    background: linear-gradient(100.45deg, #0083FF -14.66%, #30DA60 72.3%);
+    box-shadow: 0px 10px 50px rgba(34, 221, 75, 0.4);
+}
+
+.subs-input > button:active {
+    background: linear-gradient(0deg, rgba(29, 32, 64, 0.1), rgba(29, 32, 64, 0.1)), linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
+    box-shadow: 0px 10px 50px rgba(34, 221, 75, 0.4);
 }
 
 /* footer */
@@ -1064,7 +1090,8 @@ body{
 }
 
 /* form */
-#form{
+#form,
+.modal {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -1076,12 +1103,53 @@ body{
     opacity: 0;
 
 }
-#form > .container{
+.modal > .container{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 }
+
+.modal > .success-modal__container {
+    max-width: 330px;
+    width: 100%;
+}
+
+.modal__wrapper {
+    padding: 136px 15px 15px;
+    max-width: 330px;
+    width: 100%;
+    color: var(--textColor);
+    text-align: center;
+    background: var(--form);
+    border-radius: 30px;
+}
+
+.modal__title {
+    max-width: 198px;
+    margin: 0 auto 80px;
+    color: inherit;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.modal__image {
+    margin-bottom: 30px;
+}
+
+.modal__btn {
+    width: 100%;
+    padding: 20px 40px;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.modal__close {
+    align-self: start;
+    margin-bottom: 25px;
+}
+
 .form-closer{
     margin-bottom: 25px;
     z-index: 100000;
@@ -1148,6 +1216,7 @@ body{
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
+    color: var(--text_input);
     letter-spacing: 0em;
     text-align: left;
 }
@@ -1155,7 +1224,8 @@ body{
 .form-inner > button{
     width: 260px;
     height: 60px;
-    background: var(--mainGrad1);
+    background: linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
+    box-shadow: 0px 5px 30px rgba(34, 221, 59, 0.2);
     border-radius: 12px;
     display: flex;
     align-items: center;justify-content: center;

@@ -33,7 +33,7 @@
 <div id="banner">
     <h1>Trade All Your Crypto In One Place</h1>
     <h5>Rubic provides swaps, bridges and cross-chain routing features with the lowest gas fees</h5>
-    <a href="https://rubic.exchange/" target="_blank">Start Trading <img class="bannerButtonArrow" src="assets/img/arrowRight.svg"></a>
+    <a class="btn" href="https://rubic.exchange/" target="_blank">Start Trading <img class="bannerButtonArrow" src="assets/img/arrowRight.svg"></a>
     <div class="head-advHolder container">
         <div class="head-adv">
             <img class="head-adv1" src="assets/img/header-adv1.svg">
@@ -213,7 +213,7 @@
                 src="https://widgets.rubic.exchange/?chain=ETH&iframe=true&from=ETH&to=RBC&hidden=POLYGON,BSC&theme=dark&hideSelection=true&amount=1"
             >
             </iframe>
-            <button>Get widget</button>
+            <button class="btn">Get widget</button>
         </div>
     </div>
 </div>
@@ -227,7 +227,7 @@
             <div class="subs-inputOuter">
                 <form class="subs-input" id="subscribeToLetters">
                     <input placeholder="Email address">
-                    <button type="button">Subscribe</button>
+                    <button class="btn" type="button">Subscribe</button>
                 </form>
                 <p class="input_alert">Please enter correct email address.</p>
             </div>
@@ -318,7 +318,7 @@
         <p>©Copyright Rubic 2021, Privacy policy</p>
     </div>
 </div>
-<div id="form">
+<div id="form" class="modal">
     <div class="container">
         <form id="getWidgetForm" name="getWidget">
             <button class="form-closer">
@@ -332,16 +332,30 @@
                 </div>
                 <div class="form-secondRow">
                     <input id="contractAddress" placeholder="Contact address" name="contactAddress" required>
-                    <input id="pagers" placeholder="Whitepaper / Onepager" name="pagers">
+                    <input id="pagers" placeholder="Contact email" name="pagers" type="email" required>
                 </div>
                 <div class="form-thirdRow">
                     <textarea id="description" placeholder="Project description" name="description"></textarea>
                 </div>
-                <button id="getWidgetFormSubmit" type="submit">Submit</button>
+                <button class="btn" id="getWidgetFormSubmit" type="button">Submit</button>
             </div>
         </form>
     </div>
 </div>
+
+<div id="success-modal" class="modal">
+    <div class="container success-modal__container">
+        <button id="closeSuccessModal" class="modal__close">
+            <img  src="assets/img/cross.svg">
+        </button>
+        <div class="modal__wrapper">
+            <img class="modal__image" src="assets/img/success.svg" width="169" height="169" alt="success">
+            <h2 class="modal__title">Lorem ipsum dolor Lorem!</h2>
+            <button class="btn modal__btn">OK</button>
+        </div>
+    </div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="assets/js/anime-master/lib/anime.min.js"></script>
 <script src="assets/js/animations.js"></script>
