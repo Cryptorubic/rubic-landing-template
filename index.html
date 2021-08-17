@@ -33,7 +33,7 @@
 <div id="banner">
     <h1>Trade All Your Crypto In One Place</h1>
     <h5>Rubic provides swaps, bridges and cross-chain routing features with the lowest gas fees</h5>
-    <a href="https://rubic.exchange/" target="_blank">Start Trading <img class="bannerButtonArrow" src="assets/img/arrowRight.svg"></a>
+    <a class="btn" href="https://rubic.exchange/" target="_blank">Start Trading <img class="bannerButtonArrow" src="assets/img/arrowRight.svg"></a>
     <div class="head-advHolder container">
         <div class="head-adv">
             <img class="head-adv1" src="assets/img/header-adv1.svg">
@@ -98,14 +98,14 @@
         <div class="pages-inner">
             <h3>Rubic enables you to trade any token on any network with the <span>best rates</span> and <span>low fees</span> across multiple blockchains</h3>
             <div class="pages-links">
-                <div class="page-link">
-                    <a href="assets/WhitePaper.pdf" target="_blank">White Paper</a>
+                <a class="page-link" href="assets/WhitePaper.pdf" target="_blank">
+                    <span>White Paper</span>
                     <img src="assets/img/greenLine1.svg">
-                </div>
-                <div class="page-link">
-                    <a href="assets/OnePager.pdf" target="_blank">One Pager</a>
+                </a>
+                <a class="page-link" href="assets/OnePager.pdf" target="_blank">
+                    <span>One Pager</span>
                     <img src="assets/img/greenLine1.svg">
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -213,7 +213,7 @@
                 src="https://widgets.rubic.exchange/?chain=ETH&iframe=true&from=ETH&to=RBC&hidden=POLYGON,BSC&theme=dark&hideSelection=true&amount=1"
             >
             </iframe>
-            <button>Get widget</button>
+            <button class="btn">Get widget</button>
         </div>
     </div>
 </div>
@@ -226,10 +226,9 @@
             </div>
             <div class="subs-inputOuter">
                 <form class="subs-input" id="subscribeToLetters">
-                    <input placeholder="Email address">
-                    <button type="button">Subscribe</button>
+                    <input type="email" placeholder="Email address" required>
+                    <button class="btn" type="submit">Subscribe</button>
                 </form>
-                <p class="input_alert">Please enter correct email address.</p>
             </div>
         </div>
     </div>
@@ -292,25 +291,25 @@
         </div>
         <div class="footer-mid">
             <p>Documents</p>
-            <div class="footer-link">
-                <a href="assets/WhitePaper.pdf" target="_blank">White Paper</a>
+            <a href="assets/WhitePaper.pdf" target="_blank" class="footer-link">
+                <span >White Paper</span>
                 <img src="assets/img/arrowRightFooter.svg">
-            </div>
-            <div class="footer-link">
-                <a href="assets/OnePager.pdf" target="_blank">One Pager</a>
+            </a>
+            <a href="assets/OnePager.pdf" target="_blank" class="footer-link">
+                <span>One Pager</span>
                 <img src="assets/img/arrowRightFooter.svg">
-            </div>
-            <div class="footer-link">
-                <a href="https://rubic.exchange/about#roadmap" target="_blank">Roadmap</a>
+            </a>
+            <a href="https://rubic.exchange/about#roadmap" target="_blank" class="footer-link">
+                <span>Roadmap</span>
                 <img src="assets/img/arrowRightFooter.svg">
-            </div>
+            </a>
         </div>
         <div class="footer-right">
             <p>Merch Shop</p>
-            <div class="footer-link">
-                <a href="https://shop.rubic.exchange/" target="_blank">Go to Shop</a>
+            <a href="https://shop.rubic.exchange/" target="_blank" class="footer-link">
+                <span>Go to Shop</span>
                 <img src="assets/img/arrowRightFooter.svg">
-            </div>
+            </a>
         </div>
 
     </div>
@@ -318,9 +317,9 @@
         <p>©Copyright Rubic 2021, Privacy policy</p>
     </div>
 </div>
-<div id="form">
+<div id="form" class="modal">
     <div class="container">
-        <form id="getWidgetForm" name="getWidget">
+        <form id="getWidgetForm" name="getWidget" class="widget-form">
             <button class="form-closer">
                 <img  src="assets/img/cross.svg">
             </button>
@@ -332,16 +331,30 @@
                 </div>
                 <div class="form-secondRow">
                     <input id="contractAddress" placeholder="Contact address" name="contactAddress" required>
-                    <input id="pagers" placeholder="Whitepaper / Onepager" name="pagers">
+                    <input id="pagers" placeholder="Contact email" name="pagers" type="email" required>
                 </div>
                 <div class="form-thirdRow">
                     <textarea id="description" placeholder="Project description" name="description"></textarea>
                 </div>
-                <button id="getWidgetFormSubmit" type="submit">Submit</button>
+                <button class="btn" id="getWidgetFormSubmit" type="submit">Submit</button>
             </div>
         </form>
     </div>
 </div>
+
+<div id="success-modal" class="modal">
+    <div class="container success-modal__container">
+        <button id="closeSuccessModal" class="modal__close">
+            <img  src="assets/img/cross.svg">
+        </button>
+        <div class="modal__wrapper">
+            <img class="modal__image" src="assets/img/success.svg" width="169" height="169" alt="success">
+            <h2 class="modal__title">Thank you! <br> The application has been submitted</h2>
+            <button id="confirmBtn" class="btn modal__btn">OK</button>
+        </div>
+    </div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="assets/js/anime-master/lib/anime.min.js"></script>
 <script src="assets/js/animations.js"></script>
