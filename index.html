@@ -226,10 +226,9 @@
             </div>
             <div class="subs-inputOuter">
                 <form class="subs-input" id="subscribeToLetters">
-                    <input placeholder="Email address">
-                    <button class="btn" type="button">Subscribe</button>
+                    <input type="email" placeholder="Email address" required>
+                    <button class="btn" type="submit">Subscribe</button>
                 </form>
-                <p class="input_alert">Please enter correct email address.</p>
             </div>
         </div>
     </div>
@@ -292,25 +291,25 @@
         </div>
         <div class="footer-mid">
             <p>Documents</p>
-            <div class="footer-link">
-                <a href="assets/WhitePaper.pdf" target="_blank">White Paper</a>
+            <a href="assets/WhitePaper.pdf" target="_blank" class="footer-link">
+                <span >White Paper</span>
                 <img src="assets/img/arrowRightFooter.svg">
-            </div>
-            <div class="footer-link">
-                <a href="assets/OnePager.pdf" target="_blank">One Pager</a>
+            </a>
+            <a href="assets/OnePager.pdf" target="_blank" class="footer-link">
+                <span>One Pager</span>
                 <img src="assets/img/arrowRightFooter.svg">
-            </div>
-            <div class="footer-link">
-                <a href="https://rubic.exchange/about#roadmap" target="_blank">Roadmap</a>
+            </a>
+            <a href="https://rubic.exchange/about#roadmap" target="_blank" class="footer-link">
+                <span>Roadmap</span>
                 <img src="assets/img/arrowRightFooter.svg">
-            </div>
+            </a>
         </div>
         <div class="footer-right">
             <p>Merch Shop</p>
-            <div class="footer-link">
-                <a href="https://shop.rubic.exchange/" target="_blank">Go to Shop</a>
+            <a href="https://shop.rubic.exchange/" target="_blank" class="footer-link">
+                <span>Go to Shop</span>
                 <img src="assets/img/arrowRightFooter.svg">
-            </div>
+            </a>
         </div>
 
     </div>
@@ -320,7 +319,7 @@
 </div>
 <div id="form" class="modal">
     <div class="container">
-        <form id="getWidgetForm" name="getWidget">
+        <form id="getWidgetForm" name="getWidget" class="widget-form">
             <button class="form-closer">
                 <img  src="assets/img/cross.svg">
             </button>
@@ -337,7 +336,7 @@
                 <div class="form-thirdRow">
                     <textarea id="description" placeholder="Project description" name="description"></textarea>
                 </div>
-                <button class="btn" id="getWidgetFormSubmit" type="button">Submit</button>
+                <button class="btn" id="getWidgetFormSubmit" type="submit">Submit</button>
             </div>
         </form>
     </div>
@@ -350,8 +349,8 @@
         </button>
         <div class="modal__wrapper">
             <img class="modal__image" src="assets/img/success.svg" width="169" height="169" alt="success">
-            <h2 class="modal__title">Lorem ipsum dolor Lorem!</h2>
-            <button class="btn modal__btn">OK</button>
+            <h2 class="modal__title">Thank you! <br> The application has been submitted</h2>
+            <button id="confirmBtn" class="btn modal__btn">OK</button>
         </div>
     </div>
 </div>

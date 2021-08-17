@@ -26,6 +26,7 @@ $(document).ready(function (){
     let formCloser = $('.form-closer');
     let input_for_alert = $('.subs-input > input')[0];
     let buttonImg = $('#banner > button > img')[0];
+    let getWidgetForm = $('#getWidgetForm')[0];
     let getWidgetButton = $('#getWidgetFormSubmit');
     let closeSuccessModal = $('#closeSuccessModal');
 
@@ -36,7 +37,7 @@ $(document).ready(function (){
             targets: bannerButton[0],
             translateY: -2,
             easing: 'linear',
-            duration: 30
+            duration: 500
         })
     })
 
@@ -47,7 +48,7 @@ $(document).ready(function (){
             targets: tradeButton[0],
             translateY: -2,
             easing: 'linear',
-            duration: 30
+            duration: 500
         })
         anime({
             targets: form,
@@ -55,34 +56,36 @@ $(document).ready(function (){
             easing: 'linear',
             duration: 500
         })
-
     })
 
-    subscribeButton.click(function (){
-        if(input_for_alert.value.length < 10){
-            subscribeButton[0].parentElement.nextElementSibling.style.display = 'inline';
-        } else {
-            subscribeButton[0].parentElement.nextElementSibling.innerHTML = 'You have been successfully subscribed to our newsletter. Thanks.';
-            subscribeButton[0].parentElement.nextElementSibling.style.color = '#006D1F';
-            subscribeButton[0].parentElement.nextElementSibling.style.display = 'inline';
-
-        }
-    })
-
-    getWidgetButton.click(function (){
-        successModal.style.display = 'block';
+    $('.form-closer').on('click', function () {
         anime({
-            targets: getWidgetButton[0],
-            translateY: -2,
+            targets: form,
+            opacity: 0,
             easing: 'linear',
-            duration: 30
+            duration: 500,
+            complete: function (){
+                form.style.display = 'none';
+            }
         })
+    });
+
+    $('#getWidgetForm, #subscribeToLetters').on('submit', function (e){
+        e.preventDefault();
+
+        if (this.classList.contains('subs-input')) {
+            $('.modal__title').html('Thanks for subscribing! <br> Rubic Team');
+        } else {
+            $('.modal__title').html('Thank you! <br> The application has been submitted.');
+        }
+
+        successModal.style.display = 'block';
 
         anime({
             targets: form,
             opacity: 0,
             easing: 'linear',
-            duration: 100,
+            duration: 500,
             complete: function (){
                 form.style.display = 'none';
             }
@@ -92,8 +95,10 @@ $(document).ready(function (){
             targets: successModal,
             opacity: 1,
             easing: 'linear',
-            duration: 100
+            duration: 500
         })
+
+        getWidgetForm.reset();
     });
 
     footerLink.hover(function (){
@@ -143,19 +148,8 @@ $(document).ready(function (){
         }
         ChangeTheme();
     })
-    formCloser.click(function (){
-        anime({
-            targets: form,
-            opacity: 0,
-            easing: 'linear',
-            duration: 500,
-            complete: function (){
-                form.style.display = 'none';
-            }
-        })
-    })
 
-    closeSuccessModal.click(function (){
+    $('#closeSuccessModal, #confirmBtn').on('click', function (){
         anime({
             targets: successModal,
             opacity: 0,
@@ -165,11 +159,7 @@ $(document).ready(function (){
                 successModal.style.display = 'none';
             }
         })
-
     })
-
-
-
 })
 isDark = true;
 
@@ -178,15 +168,10 @@ let body = $('body')[0];
 function ChangeTheme(){
     if(isDark){
         $('html').attr('data-theme', 'day');
-
-
-
         isDark = false;
     } else {
 
         $('html').attr('data-theme', 'night')
         isDark = true;
     }
-
-
 }

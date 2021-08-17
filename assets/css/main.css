@@ -130,6 +130,10 @@ body{
     z-index: 1;
 }
 
+.widget-form {
+    text-align: right;
+}
+
 #banner > h5{
     font-family: 'NeoGram', sans-serif;
     font-size: 20px;
@@ -165,17 +169,14 @@ body{
 
 .btn {
     background: linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
-    box-shadow: 0px 5px 30px rgba(34, 221, 59, 0.25);
 }
 
 .btn:hover {
     background: linear-gradient(99.66deg, #0083FF 3.76%, #30DA60 67.93%);
-    box-shadow: 0px 10px 50px rgba(34, 221, 59, 0.25);
 }
 
 .btn:active {
     background: linear-gradient(96.88deg, #0083FF -42.02%, #30DA60 39.1%);
-    box-shadow: 0px 10px 50px rgba(34, 221, 59, 0.25);
 }
 
 
@@ -980,12 +981,10 @@ body{
 
 .subs-input > button:hover {
     background: linear-gradient(100.45deg, #0083FF -14.66%, #30DA60 72.3%);
-    box-shadow: 0px 10px 50px rgba(34, 221, 75, 0.4);
 }
 
 .subs-input > button:active {
     background: linear-gradient(0deg, rgba(29, 32, 64, 0.1), rgba(29, 32, 64, 0.1)), linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
-    box-shadow: 0px 10px 50px rgba(34, 221, 75, 0.4);
 }
 
 /* footer */
@@ -1111,12 +1110,12 @@ body{
 }
 
 .modal > .success-modal__container {
-    max-width: 330px;
+    max-width: 360px;
     width: 100%;
 }
 
 .modal__wrapper {
-    padding: 136px 15px 15px;
+    padding: 100px 15px 15px;
     max-width: 330px;
     width: 100%;
     color: var(--textColor);
@@ -1126,8 +1125,7 @@ body{
 }
 
 .modal__title {
-    max-width: 198px;
-    margin: 0 auto 80px;
+    margin: 0 auto 50px;
     color: inherit;
     font-size: 25px;
     font-weight: 700;
@@ -1135,18 +1133,19 @@ body{
 }
 
 .modal__image {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .modal__btn {
     width: 100%;
     padding: 20px 40px;
     font-weight: 600;
-    border-radius: 30px;
+    border-radius: 12px;
 }
 
 .modal__close {
     align-self: start;
+    margin-left: auto;
     margin-bottom: 25px;
 }
 
@@ -1412,6 +1411,14 @@ button{
         width: 60px;
         line-height: 13px;
         text-align: center;
+    }
+
+    .subs-text {
+        margin-right: 20px;
+    }
+
+    .subs-input > button {
+        flex-shrink: initial;
     }
 }
 
@@ -1788,12 +1795,10 @@ button{
 
     .trade-inner > button:hover {
         background: linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
-        box-shadow: 0px 10px 50px rgba(34, 221, 59, 0.25);
     }
 
     .trade-inner > button:active {
         background: linear-gradient(0deg, rgba(29, 32, 64, 0.1), rgba(29, 32, 64, 0.1)), linear-gradient(113.38deg, #30DA60 31.59%, #0083FF 178.87%);
-        box-shadow: 0px 5px 30px rgba(34, 221, 59, 0.25);
     }
 
     #footer > .container > p{
@@ -1805,6 +1810,12 @@ button{
         line-height: 22px;
         letter-spacing: 0em;
         text-align: left;
+    }
+
+    .modal > .success-modal__container {
+        width: calc(100% - 48px);
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
 }
