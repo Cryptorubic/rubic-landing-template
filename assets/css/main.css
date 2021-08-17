@@ -1477,6 +1477,9 @@ button{
         left: 20px;
     }
 
+    .rubic-widget {
+        height: 400px;
+    }
 }
 @media (max-width: 560px) {
     .head-advHolder{
@@ -1671,7 +1674,6 @@ button{
     }
     .subs-input{
         flex-direction: column;
-        margin-bottom: 70px;
     }
     .subs-input > input{
         margin-bottom: 10px;
@@ -1685,7 +1687,7 @@ button{
         font-size: 14px;
         border-radius: 12px;
         width: calc(100% - 8px);
-        max-width: 300px;
+        max-width: none;
     }
     .subs-inner{
         padding: 20px;
@@ -1818,4 +1820,7 @@ button{
         padding-right: 24px;
     }
 
+    .rubic-widget {
+        height: 490px;
+    }
 }
