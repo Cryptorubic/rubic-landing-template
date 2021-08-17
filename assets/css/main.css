@@ -1420,6 +1420,10 @@ button{
     .subs-input > button {
         flex-shrink: initial;
     }
+
+    .rubic-widget {
+        height: 400px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1478,7 +1482,7 @@ button{
     }
 
     .rubic-widget {
-        height: 400px;
+        height: 490px;
     }
 }
 @media (max-width: 560px) {
@@ -1818,9 +1822,5 @@ button{
         width: calc(100% - 48px);
         padding-left: 24px;
         padding-right: 24px;
-    }
-
-    .rubic-widget {
-        height: 490px;
     }
 }
