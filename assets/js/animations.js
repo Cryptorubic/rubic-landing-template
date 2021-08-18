@@ -74,7 +74,7 @@ $(document).ready(function (){
         e.preventDefault();
 
         if (this.classList.contains('subs-input')) {
-            $('.modal__title').html('Thanks for subscribing! <br> Rubic Team');
+            $('.modal__title').html('Thanks you! <br> We\'ve sent a confirmation letter to your mail');
         } else {
             $('.modal__title').html('Thank you! <br> The application has been submitted.');
         }
