@@ -168,10 +168,11 @@ let body = $('body')[0];
 function ChangeTheme(){
     if(isDark){
         $('html').attr('data-theme', 'day');
+        $('#rubic-widget').attr('src', 'https://stage.rubic.exchange/?iframe=horizontal&to=RBC&fromChain=ETH&toChain=ETH&from=ETH&amount=1&theme=light&background=%23ffffff');
         isDark = false;
     } else {
-
-        $('html').attr('data-theme', 'night')
+        $('html').attr('data-theme', 'night');
+        $('#rubic-widget').attr('src', 'https://stage.rubic.exchange/?iframe=horizontal&to=RBC&fromChain=ETH&toChain=ETH&from=ETH&amount=1&theme=dark&background=%2329382f');
         isDark = true;
     }
 }

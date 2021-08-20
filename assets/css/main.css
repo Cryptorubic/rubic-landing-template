@@ -719,6 +719,10 @@ body{
     box-shadow: 0px 0px 30px rgba(34, 221, 59, 0.25);
 }
 
+#trade > .container {
+    max-width: 1200px;
+}
+
 .trade-inner{
     padding: 50px 60px 58px;
     background-color: var(--holderColors);
@@ -765,7 +769,6 @@ body{
     font-size: 18px;
 }
 .trade-inner > iframe {
-    border-radius: 19px;
     margin-top: 33px;
 }
 .trader-holder{
@@ -1273,6 +1276,10 @@ button{
 }
 
 
+#rubic-widget {
+    box-shadow: 3px 3px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* fonts */
 @font-face {
     font-family: 'NeoGram';
@@ -1421,7 +1428,7 @@ button{
         flex-shrink: initial;
     }
 
-    .rubic-widget {
+    #rubic-widget {
         height: 400px;
     }
 }
@@ -1481,7 +1488,7 @@ button{
         left: 20px;
     }
 
-    .rubic-widget {
+    #rubic-widget {
         height: 490px;
     }
 }
