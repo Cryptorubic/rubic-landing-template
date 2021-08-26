@@ -76,7 +76,7 @@ $(document).ready(function (){
             $('.modal__title').html('Thanks you! <br> We\'ve sent a confirmation letter to your mail');
         } else {
             const formData = new FormData(this);
-            fetch('https://stage-api.rubic.exchange/api/email/partnership', {
+            fetch('https://api.rubic.exchange/api/email/partnership', {
                 method: 'POST',
                 body: formData
             })
