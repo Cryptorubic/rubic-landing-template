@@ -719,8 +719,12 @@ body{
     box-shadow: 0px 0px 30px rgba(34, 221, 59, 0.25);
 }
 
+#trade > .container {
+    max-width: 1200px;
+}
+
 .trade-inner{
-    padding: 50px 60px 58px;
+    padding: 50px 5px 58px;
     background-color: var(--holderColors);
     border-radius: 30px;
     display: flex;
@@ -737,6 +741,7 @@ body{
     letter-spacing: 0em;
     text-align: center;
     max-width: 600px;
+    margin-bottom: 15px;
 
 }
 .trade-inner > p > span{
@@ -765,7 +770,6 @@ body{
     font-size: 18px;
 }
 .trade-inner > iframe {
-    border-radius: 19px;
     margin-top: 33px;
 }
 .trader-holder{
@@ -1421,7 +1425,7 @@ button{
         flex-shrink: initial;
     }
 
-    .rubic-widget {
+    #rubic-widget {
         height: 400px;
     }
 }
@@ -1481,7 +1485,7 @@ button{
         left: 20px;
     }
 
-    .rubic-widget {
+    #rubic-widget {
         height: 490px;
     }
 }
@@ -1519,6 +1523,13 @@ button{
         padding-left: 24px;
         padding-right: 24px;
     }
+
+    #trade >  .container{
+        width: calc(100% - 20px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     #navbar{
         height: 30px;
         padding-top: 25px;

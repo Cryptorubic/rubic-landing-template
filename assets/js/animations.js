@@ -170,12 +170,17 @@ isDark = true;
 let r = document.querySelector(':root');
 let body = $('body')[0];
 function ChangeTheme(){
+    const newConfiguration = {...configuration};
+
     if(isDark){
         $('html').attr('data-theme', 'day');
+        newConfiguration.theme = 'light';
+        newConfiguration.background = 'white';
+        rubicWidget.init(newConfiguration);
         isDark = false;
     } else {
-
-        $('html').attr('data-theme', 'night')
+        $('html').attr('data-theme', 'night');
+        rubicWidget.init(newConfiguration);
         isDark = true;
     }
 }
