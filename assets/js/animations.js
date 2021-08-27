@@ -166,13 +166,28 @@ isDark = true;
 let r = document.querySelector(':root');
 let body = $('body')[0];
 function ChangeTheme(){
+    const configuration = {
+        from: 'ETH',
+        to: 'RBC',
+        fromChain: 'ETH',
+        toChain: 'ETH',
+        amount: 1,
+        iframe: 'flex',
+        hideSelectionFrom: false,
+        hideSelectionTo: true,
+        theme: 'dark',
+        background: '#28372e'
+    }
+
     if(isDark){
         $('html').attr('data-theme', 'day');
-        $('#rubic-widget').attr('src', 'https://stage.rubic.exchange/?iframe=horizontal&to=RBC&fromChain=ETH&toChain=ETH&from=ETH&amount=1&theme=light&background=%23ffffff');
+        configuration.theme = 'light';
+        configuration.background = 'white';
+        rubicWidget.init(configuration);
         isDark = false;
     } else {
         $('html').attr('data-theme', 'night');
-        $('#rubic-widget').attr('src', 'https://stage.rubic.exchange/?iframe=horizontal&to=RBC&fromChain=ETH&toChain=ETH&from=ETH&amount=1&theme=dark&background=%2329382f');
+        rubicWidget.init(configuration);
         isDark = true;
     }
 }
