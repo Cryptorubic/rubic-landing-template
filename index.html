@@ -15,6 +15,10 @@
         !function(){function t(t,e){return function(){window.carrotquestasync.push(t,arguments)}}if("undefined"==typeof carrotquest){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//cdn.carrotquest.app/api.min.js",document.getElementsByTagName("head")[0].appendChild(e),window.carrotquest={},window.carrotquestasync=[],carrotquest.settings={};for(var n=["connect","track","identify","auth","oth","onReady","addCallback","removeCallback","trackMessageInteraction"],a=0;a<n.length;a++)carrotquest[n[a]]=t(n[a])}}(),carrotquest.connect("45192-451b5ee7560c4681d7c61219ea");
     </script>
     <!-- Carrot quest END -->
+
+    <!-- Rubic Widget -->
+    <script type="text/javascript" src="https://widgets.rubic.exchange/iframe/bundle.min.js"></script>
+    <!-- Rubic Widget -->
 </head>
 <body>
 <div id="navbar">
@@ -206,26 +210,9 @@
 <!--                    <button>Connect Wallet</button>-->
 <!--                </div>-->
 <!--            </div>-->
-            <iframe
-                class="rubic-widget"
-                frameborder="0"
-                height="180"
-                width="1180"
-                style="border-radius: 19px"
-                src="https://dev.rubic.exchange/?iframe=horizontal&to=RBC&fromChain=ETH&toChain=ETH&from=ETH&amount=1&background=%2329382f"
-            >
-            </iframe>
-            <br />
-            <br />
-            <iframe
-                    class="rubic-widget"
-                    frameborder="0"
-                    height="500"
-                    width="375"
-                    style="border-radius: 19px"
-                    src="https://dev.rubic.exchange/?iframe=vertical&to=RBC&fromChain=ETH&toChain=ETH&from=ETH&amount=1&background=%2329382f"
-            >
-            </iframe>
+
+            <div style="width: 100%;" id="rubic-widget-root"></div>
+
             <button class="btn">Get widget</button>
         </div>
     </div>
@@ -371,5 +358,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="assets/js/anime-master/lib/anime.min.js"></script>
 <script src="assets/js/animations.js"></script>
+
+<script defer type="text/javascript">
+    const configuration = {
+        from: 'ETH',
+        to: 'RBC',
+        fromChain: 'ETH',
+        toChain: 'ETH',
+        amount: 1,
+        iframe: 'flex',
+        hideSelectionFrom: false,
+        hideSelectionTo: true,
+        theme: 'dark',
+        background: '#28372e'
+    }
+    rubicWidget.init(configuration);
+</script>
+
 </body>
 </html>

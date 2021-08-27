@@ -724,7 +724,7 @@ body{
 }
 
 .trade-inner{
-    padding: 50px 60px 58px;
+    padding: 50px 5px 58px;
     background-color: var(--holderColors);
     border-radius: 30px;
     display: flex;
@@ -741,6 +741,7 @@ body{
     letter-spacing: 0em;
     text-align: center;
     max-width: 600px;
+    margin-bottom: 15px;
 
 }
 .trade-inner > p > span{
@@ -1526,6 +1527,13 @@ button{
         padding-left: 24px;
         padding-right: 24px;
     }
+
+    #trade >  .container{
+        width: calc(100% - 20px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     #navbar{
         height: 30px;
         padding-top: 25px;
