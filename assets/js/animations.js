@@ -72,10 +72,14 @@ $(document).ready(function (){
 
     $('#getWidgetForm, #subscribeToLetters').on('submit', function (e){
         e.preventDefault();
-
         if (this.classList.contains('subs-input')) {
             $('.modal__title').html('Thanks you! <br> We\'ve sent a confirmation letter to your mail');
         } else {
+            const formData = new FormData(this);
+            fetch('https://api.rubic.exchange/api/email/partnership', {
+                method: 'POST',
+                body: formData
+            })
             $('.modal__title').html('Thank you! <br> The application has been submitted.');
         }
 
